@@ -25,7 +25,7 @@ SECRET_KEY = 'hu*&unx=@%1r^vv1!ujaq$0w+*9w*@0c(g%$af&#s=msld_)e@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['abhinandanarya.pythonanywhere.com']
 
 
 # Application definition
@@ -119,3 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/AbhinandanArya/websites/Robotics_Club/main_site/static'
+

@@ -11,8 +11,8 @@
 {% load static %}
 
   <!-- Favicons -->
-  <link href="{% static 'main_site/img/about-bg.jpg' %}" rel="icon">
-  <link href="{% static 'main_siteimg/about-bg.jpg' %}" rel="apple-touch-icon">
+  <link href="{% static 'main_site/img/logo.jpg' %}" rel="icon">
+  <link href="{% static 'main_siteimg/logo.jpg' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
@@ -40,11 +40,25 @@
   	.logo {
   		border-radius: 50px;
   	}
-  	@media screen and (min-width: 1000px) {
-    .phone {
-    visibility: hidden
-      }
+  	.desktop {
+  	        display: none;
+  	    }
+  	 .desktop-view {
+  	     width:100%;
+  	 }
+  	 @media (min-width: 768px) {
+        .phone {
+            display: none;
+        }
+        .desktop {
+            display: block;
+        }
+        .desktop-view {
+            width: 80%;
+        }
     }
+
+
 </style>
 </head>
 
@@ -67,8 +81,7 @@
           <li class="phone"><img src="{% static 'main_site/img/logo.jpg' %}" width="50%" class="logo"></li>
           <li class="menu-active"><a href="#intro">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Our Projects</a></li>
+          <li><a href="#portfolio">Projects</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -87,12 +100,12 @@
 
         <div class="carousel-inner" role="listbox">
 
-          <div class="carousel-item active">
-            <div class="carousel-background"><img src="{% static 'main_site/img/intro-carousel/1.jpg' %}" alt=""></div>
+
+        <div class="carousel-item active">
+            <div class="carousel-background"><img src="{% static 'main_site/img/intro-carousel/back2.jpeg' %}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>&lt; Welcome to Robotics Club DDUC &gt;</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h2>&lt; Welcome &gt;<br>to<br> Robotics Club DDUC </h2>
                 <a href="#featured-services" class="btn-get-started scrollto">Explore</a>
               </div>
             </div>
@@ -110,12 +123,23 @@
           </div>
 
           <div class="carousel-item">
-            <div class="carousel-background"><img src="{% static 'main_site/img/intro-carousel/3.png' %}" alt=""></div>
+            <div class="carousel-background"><img src="{% static 'main_site/img/rof.jpg' %}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>E - Yantra</h2>
-                <p>Our team members has selected in E-Yantra Stage-1</p>
-                <a href="https://www.e-yantra.org/" class="btn-get-started scrollto">Info about E-Yantra</a>
+                <h2>RoFSoc</h2>
+                <p>RoFSoc (Robotics for Society) is technical meet with an aim to offer a platform for the students to display their skills and knowledge in the form of projects made to serve the society was initiated.</p>
+                <a href="https://dducollegedu.ac.in/Viewtopics.aspx?MenuId=qM8HbbtPsiGL8PlzZURyj5HvkpkY7daF" class="btn-get-started scrollto">More Info</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="https://cdn.thecollegefever.com/upload/28799487-1550930025709.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>Spark Fest</h2>
+                <p>SPARK'19 is the Robotics Festival in which number of competitors from reputed institutes participates. </p>
+                <a href="https://www.thecollegefever.com/events/spark19-O1wePJyGhB" class="btn-get-started scrollto">More Info</a>
               </div>
             </div>
           </div>
@@ -146,21 +170,21 @@
         <div class="row">
 
           <div class="col-lg-4 box">
-            
+
             <h4 class="title"><a href="">Curiosity</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <p class="description">Curiosity is heavily associated with all aspects of human development, in which derives the process of learning and desire to acquire knowledge and skill.</p>
           </div>
 
           <div class="col-lg-4 box box-bg">
-            <i class="ion-ios-stopwatch-outline"></i>
+            <i class="ion-ios-stopwatch-outline desktop"></i>
             <h4 class="title"><a href="">Innovation</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <p class="description">Innovation is often also viewed as the application of better solutions that meet new requirements, unarticulated needs, or existing market needs.</p>
           </div>
 
           <div class="col-lg-4 box">
-            
+
             <h4 class="title"><a href="">Transformation</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <p class="description">Transformation begins and ends with how you think about Tech and Human Growth.</p>
           </div>
 
         </div>
@@ -176,6 +200,8 @@
         <header class="section-header">
           <h3>About Us</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p><iframe class="desktop-view" height="350" src="https://www.youtube.com/embed/5ZSg9or4sYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </p>
         </header>
 
         <div class="row about-cols">
@@ -186,7 +212,7 @@
                 <img src="{% static 'main_site/img/prizes.jpeg' %}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Prizes</a></h2>
+              <h2 class="title"><a href="#">Events</a></h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </p>
@@ -199,7 +225,7 @@
                 <img src="{% static 'main_site/img/prizeses.jpeg' %}" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-list-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <h2 class="title"><a href="#">Achievements</a></h2>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
@@ -209,7 +235,7 @@
           <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
               <div class="img">
-                <img src="{% static 'main_site/img/grp.jpeg' %}" alt="" class="img-fluid">
+                <img src="{% static 'main_site/img/grp.jpeg' %}" alt="" class="img-fluid" height="600px">
                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
               <h2 class="title"><a href="#">Team</a></h2>
@@ -223,49 +249,6 @@
 
       </div>
     </section><!-- #about -->
-
-    <!--==========================
-      Skills Section
-    ============================-->
-    <section id="skills">
-      <div class="container">
-
-        <header class="section-header">
-          <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-        </header>
-
-        <div class="skills-content">
-
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-            </div>
-          </div>
-
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!--==========================
       Portfolio Section
     ============================-->
@@ -288,7 +271,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Spider Bot</a></h4>
-                <p> by ABC</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -303,7 +286,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Leg Bot</a></h4>
-                <p>by Rohit Benjewal</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -318,7 +301,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Drone</a></h4>
-                <p>by ABC</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -333,7 +316,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Robot Cars</a></h4>
-                <p>by Robotic Club Students</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -348,7 +331,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Monkey Bot</a></h4>
-                <p>by ABC</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -363,7 +346,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Small Bot</a></h4>
-                <p>by ABC</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -378,7 +361,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Stone-Paper-Scissor</a></h4>
-                <p>by ABC</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -393,7 +376,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Card 3</a></h4>
-                <p>Card</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -408,7 +391,7 @@
 
               <div class="portfolio-info">
                 <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
+                <p><!-- by ABC--></p>
               </div>
             </div>
           </div>
@@ -422,24 +405,12 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Our Respectives</h3>
+          <h3>Our Teacher Convenor</h3>
         </header>
 
         <div class="owl-carousel testimonials-carousel">
-
           <div class="testimonial-item">
-            <img src="{% static 'main_site/img/principal.jpg' %}" class="testimonial-img" alt="">
-            <h3>Dr. Hemant Jain</h3>
-            <h4>DDU College Principal</h4>
-            <p>
-              <img src="{% static 'main_site/img/quote-sign-left.png' %}" class="quote-sign-left" alt="">
-              Higher Education  does not simply mean an  arithmetic progression from Class XII to an  Undergraduate.
-              <img src="{% static 'main_site/img/quote-sign-right.png' %}" class="quote-sign-right" alt="">
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="{% static 'main_site/img/na.jpg' %}" class="testimonial-img" alt="">
+            <img src="{% static 'main_site/img/anju.jpeg' %}" class="testimonial-img" alt="">
             <h3>Dr. Anju Aggrawal</h3>
             <h4>Robotics Club DDUC Convenor</h4>
             <p>
@@ -466,13 +437,31 @@
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="{% static 'main_site/img/na.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'main_site/img/team/harsh.png' %}" class="img-fluid" alt="" width="300px" height="300px">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
+                  <h4>Harsh Joon</h4>
+                  <span>Core Member</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="{% static 'main_site/img/team/vsvai.jpeg' %}" class="img-fluid" alt="" width="300px" height="300px">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Vaibhav Singh</h4>
+                  <span>President of Robotics Club</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -486,29 +475,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="{% static 'main_site/img/na.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'main_site/img/team/jaideep.jpeg' %}" class="img-fluid" alt="" width="300px" height="300px">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="{% static 'main_site/img/na.jpg' %}" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
+                  <h4>Jaideep Shekhar</h4>
+                  <span>Web Executive</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -522,11 +493,11 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="{% static 'main_site/img/na.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'main_site/img/team/sid.png' %}" class="img-fluid" alt="" width="300px" height="300px">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
+                  <h4>Siddhant</h4>
+                  <span>Core Member</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
@@ -542,33 +513,31 @@
 
       </div>
     </section><!-- #team -->
-
     <!--==========================
       Contact Section
     ============================-->
     <section id="contact" class="section-bg wow fadeInUp">
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-header phone">
+
           <h3>Contact Us</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
         </div>
 
         <div class="row contact-info">
-
           <div class="col-md-4">
             <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
+              <a href="https://www.google.com/maps/place/Deen+Dayal+Upadhyaya+College/@28.6051249,77.0358069,17z/data=!4m12!1m6!3m5!1s0x390d053340000001:0x43728703a210ae01!2sDeen+Dayal+Upadhyaya+College!8m2!3d28.6051249!4d77.0379956!3m4!1s0x390d053340000001:0x43728703a210ae01!8m2!3d28.6051249!4d77.0379956"><i class="ion-ios-location-outline"></i></a>
               <h3>Address</h3>
               <address>Sector-3 Dwarka</address>
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4 desktop">
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3 style="color:white">Contact us</h3>
             </div>
           </div>
 
@@ -622,8 +591,8 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Robotics Club DDUC</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <h3>Deen Dayal Upadhyaya College</h3>
+            <p>Deen Dayal Upadhyaya is a constituent college of the University of Delhi. The Government of National Capital Territory of Delhi established the college in the year 1990 in Karampura. <a href="https://dducollegedu.ac.in/Viewtopics.aspx?MenuId=c2D5EsQZoOpkXfxJ4sBdZH7Wzqtsqwwp">For more info !</a></p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -642,26 +611,20 @@
               Sector-3 <br>
               Dwarka<br>
               New Delhi - 110078 <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
 
             <div class="social-links">
               <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="https://www.facebook.com/roboticsclubdduc/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://instagram.com/roboticsclubdduc?igshid=qzxrho4whbi4" class="instagram"><i class="fa fa-instagram"></i></a>
               <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
 
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit"  value="Subscribe">
-            </form>
+          <div class="col-lg-3 col-md-6 footer-newsletter desktop">
+            <img src="{% static 'main_site/img/logo.jpg' %}" width="100%">
           </div>
 
         </div>
@@ -672,15 +635,7 @@
       <div class="copyright">
         &copy; Copyright <strong>Robotics Club</strong>. All Rights Reserved
       </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
-        -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+
     </div>
   </footer><!-- #footer -->
 
